@@ -1,5 +1,5 @@
 package DomainModel;
 
 public interface Sizeble {
-    int size = 0;
+    public int getSize();
 }

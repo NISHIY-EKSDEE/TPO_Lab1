@@ -51,4 +51,19 @@ public class RoomTest {
         assertEquals(names.get(1), human2.getName());
         assertEquals(names.get(2), human3.getName());
     }
+
+    @Test
+    public void overfill(){
+        Room room = new Room("", 20);
+        Human human1 = new Human("1");
+        Human human2 = new Human("2");
+        Human human3 = new Human("3");
+
+        room.enter(human1);
+        room.enter(human2);
+        boolean res = room.enter(human3);
+
+        assertFalse(res);
+
+    }
 }

@@ -4,6 +4,7 @@ import com.sun.glass.ui.Size;
 
 public class Human implements Sizeble {
 
+    private final static int HUMAN_SIZE = 10;
     private String name;
     private int energy;
     private int strength;
@@ -19,6 +20,14 @@ public class Human implements Sizeble {
     }
 
     public Human(String name, int strength, int agility, int intelligence, int energy) {
+        this.name = name;
+        this.energy = energy;
+        this.strength = strength;
+        this.agility = agility;
+        this.intelligence = intelligence;
+    }
+
+    public Human(String name, int strength, int agility, int intelligence, int energy, int size) {
         this.name = name;
         this.energy = energy;
         this.strength = strength;
@@ -52,5 +61,10 @@ public class Human implements Sizeble {
 
     public int getIntelligence() {
         return intelligence;
+    }
+
+    @Override
+    public int getSize() {
+        return HUMAN_SIZE;
     }
 }
